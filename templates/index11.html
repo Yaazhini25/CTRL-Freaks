@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Berlin Sans", sans-serif;
+            background: #141414; /* Dark background */
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        .form-box {
+            background: #1f1f1f; /* Slightly lighter dark background */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.4), 0 0 15px rgba(0, 255, 255, 0.4);
+            width: 350px;
+            text-align: center;
+        }
+        .form-box h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #ffffff;
+        }
+        .form-box label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #cccccc;
+        }
+        .form-box input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            background: #2b2b2b; /* Input background */
+            color: #ffffff; /* Input text color */
+            box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+        }
+        .form-box input:focus {
+            outline: none;
+            border: 1px solid #00ffff;
+        }
+        .form-box button {
+            background: linear-gradient(45deg, #ff0080, #00ffff);
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .form-box button:hover {
+            background: linear-gradient(45deg, #00ffff, #ff0080);
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.4), 0 0 15px rgba(0, 255, 255, 0.4);
+        }
+        #message {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #ff0080;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-box">
+            <h1>Product Information</h1>
+            <form id="product-form" method="POST" action="/submit">
+                <label for="product_name">Product Name:</label>
+                <input type="text" id="product_name" name="product_name" required>
+
+                <label for="product_price">Product Price:</label>
+                <input type="number" id="product_price" name="product_price" required>
+
+                <label for="product_start">Product Starting Number:</label>
+                <input type="text" id="product_start" name="product_start" required>
+
+                <label for="product_quan">Product Quantity:</label>
+                <input type="number" id="product_quan" name="product_quan" required>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p id="message"></p>
+        </div>
+    </div>
+</body>
+</html>

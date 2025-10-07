@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Analytics</title>
+    <style>
+        body { font-family: Arial; background: #f9f9f9; margin: 0; padding: 20px; text-align: center; }
+        h1 { color: #333; }
+        .chart-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 50px; margin-top: 30px; }
+        .chart-box { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <h1>Store Analytics Dashboard</h1>
+    <div class="chart-container">
+        <div class="chart-box">
+            <h2>Total Revenue per Product</h2>
+            {{ bar_chart|safe }}
+        </div>
+        <div class="chart-box">
+            <h2>Revenue Contribution by Product</h2>
+            {{ donut_chart|safe }}
+        </div>
+    </div>
+</body>
+</html>
